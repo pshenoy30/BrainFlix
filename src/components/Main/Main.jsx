@@ -5,6 +5,7 @@ import VideoTitle from '../VideoTitle/VideoTitle.jsx';
 import VideoInfo from '../VideoInfo/VideoInfo.jsx';
 import VideoDescription from '../VideoDescription/videoDescription.jsx';
 import Comment from '../Comment/Comment.jsx';
+import NextVideo from '../NextVideo/NextVideo.jsx';
 
 function Main(){
 
@@ -17,6 +18,7 @@ function Main(){
     <VideoInfo videoData={videoSelected} />
     <VideoDescription videoDataDescription={videoSelected.description} />
     <Comment videoDataComment={videoSelected.comments} />
+    <NextVideo videoData={videoDetailsData} />
     </>
   )
 }
