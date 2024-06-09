@@ -1,3 +1,5 @@
+import "../NextVideo/NextVideo.scss"
+
 function NextVideoList ({id, image, title, channel, onVideoSelected}) {
   return (
     <article class="next-video__list" key={id} onClick={onVideoSelected}>
