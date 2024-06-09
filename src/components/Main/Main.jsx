@@ -11,6 +11,15 @@ function Main(){
 
   const [videoSelected, setVideoSelected] = useState(videoDetailsData[0]);
 
+  const videoSelect = (videoId) => {
+    console.log(videoId);
+    const videoClicked = videoDetailsData.find((videoData) => {
+        return videoData.id === videoId;
+    });
+    console.log(videoClicked);
+    setVideoSelected(videoClicked);
+  }
+
   return (
     <>
     <VideoPlayer videoData={videoSelected} />
@@ -18,7 +27,7 @@ function Main(){
     <VideoInfo videoData={videoSelected} />
     <VideoDescription videoDataDescription={videoSelected.description} />
     <Comment videoDataComment={videoSelected.comments} />
-    <NextVideo videoData={videoDetailsData} />
+    <NextVideo id={videoSelected.id} videoData={videoDetailsData} onVideoClicked={videoSelect}/>
     </>
   )
 }
