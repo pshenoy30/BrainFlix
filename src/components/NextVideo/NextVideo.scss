@@ -1,0 +1,42 @@
+@use "../../styles/partials/global.scss";
+@use "../../styles/partials/typography";
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.next-video{
+    padding: 1.5rem 1rem 0 1rem;
+
+    &__header{
+        text-transform: uppercase;
+        color: $BrainFlix-Silver;
+        font-size: 0.8rem;
+        line-height: 1.25rem;
+    }
+
+    &__list{
+        margin: 1rem 0;
+        display: flex;
+
+        &__image{
+            object-fit: cover;
+            width: 7rem;
+            height: 4rem;
+            border-radius: 4px;
+        }
+
+        &__details{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            &__text{
+                font-size: 0.8rem;
+                line-height: 1.25rem;
+                margin-left: 0.75rem;
+                &--light{
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
