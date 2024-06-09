@@ -6,11 +6,19 @@
 .next-video{
     padding: 1.5rem 1rem 0 1rem;
 
+    @include tablet{
+        padding: 1.5rem 1rem 0 3rem;
+    }
+
     &__header{
         text-transform: uppercase;
         color: $BrainFlix-Silver;
         font-size: 0.8rem;
         line-height: 1.25rem;
+
+        @include tablet{
+            font-size: 0.875rem;
+        }
     }
 
     &__list{
@@ -22,6 +30,10 @@
             width: 7rem;
             height: 4rem;
             border-radius: 4px;
+            @include tablet{
+                width: 9rem;
+                height: 5rem;
+            }
         }
 
         &__details{
@@ -35,6 +47,9 @@
                 margin-left: 0.75rem;
                 &--light{
                     font-weight: 400;
+                }
+                @include tablet{
+                    font-size: 0.875rem;
                 }
             }
         }
