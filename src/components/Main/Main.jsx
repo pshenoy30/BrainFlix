@@ -4,6 +4,8 @@ import VideoPlayer from '../VideoPlayer/VideoPlayer.jsx';
 import VideoTitle from '../VideoTitle/VideoTitle.jsx';
 import VideoInfo from '../VideoInfo/VideoInfo.jsx';
 import VideoDescription from '../VideoDescription/videoDescription.jsx';
+import Comment from '../Comment/Comment.jsx';
+
 function Main(){
 
   const [videoSelected, setVideoSelected] = useState(videoDetailsData[0]);
@@ -14,6 +16,7 @@ function Main(){
     <VideoTitle videoDataTitle={videoSelected.title} />
     <VideoInfo videoData={videoSelected} />
     <VideoDescription videoDataDescription={videoSelected.description} />
+    <Comment videoDataComment={videoSelected.comments} />
     </>
   )
 }
