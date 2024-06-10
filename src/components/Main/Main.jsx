@@ -1,9 +1,6 @@
 import { useState } from 'react';
 import videoDetailsData from '../../data/video-details.json';
-import VideoPlayer from '../VideoPlayer/VideoPlayer.jsx';
-import VideoTitle from '../VideoTitle/VideoTitle.jsx';
-import VideoInfo from '../VideoInfo/VideoInfo.jsx';
-import VideoDescription from '../VideoDescription/VideoDescription.jsx';
+import Video from '../Video/Video.jsx';
 import Comment from '../Comment/Comment.jsx';
 import NextVideo from '../NextVideo/NextVideo.jsx';
 
@@ -22,10 +19,7 @@ function Main(){
 
   return (
     <>
-    <VideoPlayer videoData={videoSelected} />
-    <VideoTitle videoDataTitle={videoSelected.title} />
-    <VideoInfo videoData={videoSelected} />
-    <VideoDescription videoDataDescription={videoSelected.description} />
+    <Video videoData={videoSelected} />
     <Comment videoDataComment={videoSelected.comments} />
     <NextVideo id={videoSelected.id} videoData={videoDetailsData} onVideoClicked={videoSelect}/>
     </>

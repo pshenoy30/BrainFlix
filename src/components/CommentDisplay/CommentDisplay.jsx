@@ -55,16 +55,16 @@ function CommentDisplay ({videoCommentData}) {
         {videoCommentData.map((commentData) => {
             return (
               <>
-                <article class="comment-display">
-                    <div class="comment-display__image">
-                      <img class="comment-display__image"/>
+                <article className="comment-display">
+                    <div className="comment-display__image">
+                      <img className="comment-display__image"/>
                     </div>
-                    <div class="comment-display__details">
-                      <div class="comment-display__details__name-time">
-                        <h3 class="comment-display__details__name-time__text">{commentData.name}</h3>
-                        <h3 class="comment-display__details__name-time__text comment-display__details__name-time__text--mercury comment-display__details__text--right">{dynamicTimeStamp(commentData.timestamp)}</h3> 
+                    <div className="comment-display__details">
+                      <div className="comment-display__details__name-time">
+                        <h3 className="comment-display__details__name-time__text">{commentData.name}</h3>
+                        <h3 className="comment-display__details__name-time__text comment-display__details__name-time__text--mercury comment-display__details__text--right">{dynamicTimeStamp(commentData.timestamp)}</h3> 
                       </div>
-                      <p class="comment-display__details__name-time__text">{commentData.comment}</p> 
+                      <p className="comment-display__details__name-time__text">{commentData.comment}</p> 
                     </div>
                 </article>
                 <hr />

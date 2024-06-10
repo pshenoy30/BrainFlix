@@ -1,0 +1,21 @@
+@use "../../styles/partials/global.scss";
+@use "../../styles/partials/typography";
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.video-data{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 0.25rem;
+    &__text{
+        display: flex;
+        font-size: 0.8rem;
+        line-height: 1.25rem;
+        &--silver{
+            color: $BrainFlix-Silver;
+            font-weight: 400;
+        }
+    }
+    
+}

@@ -3,7 +3,7 @@ import "./VideoDescription.scss"
 function VideoDescription ({videoDataDescription}) {
   return (
     <article>
-        <p class="video-description">{videoDataDescription}</p>
+        <p className="video-description">{videoDataDescription}</p>
     </article>
   )
 }
