@@ -1,7 +1,7 @@
 import VideoPlayer from '../VideoPlayer/VideoPlayer.jsx';
 import VideoTitle from '../VideoTitle/VideoTitle.jsx';
 import VideoInfo from '../VideoInfo/VideoInfo.jsx';
-import VideoDescription from '../VideoDescription/VideoDescription.jsx';
+import VideoDescription from '../VideoDescription/videoDescription.jsx';
 
 function Video ({videoData}){
   return (
