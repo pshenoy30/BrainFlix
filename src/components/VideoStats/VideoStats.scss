@@ -12,6 +12,10 @@
     &__stats{
         display: flex;
         gap: 0.25em;
+        &__image{
+            font-size: 0.8rem;
+            line-height: 1.25rem;
+        }
         &__text{
             color: $BrainFlix-Silver;
             font-size: 0.8rem;

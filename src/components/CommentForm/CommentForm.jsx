@@ -10,7 +10,7 @@ function CommentForm (){
         </div>
         <div className="comment-form__right">
             <h3 className="comment-form__right__header">Join the converstation</h3>
-            <div class="comment-form__right__input-button">
+            <div className="comment-form__right__input-button">
               <input placeholder="Add a new comment" className="comment-form__right__input-button__input" />
               <button type="submit" className="comment-form__right__input-button__button">
                 <img className="comment-form__right__input-button__button__image" src={commentImage} />

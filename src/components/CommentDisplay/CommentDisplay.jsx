@@ -47,15 +47,15 @@ const dynamicTimeStamp = (timestamp) => {
   }
 }
 
-
 function CommentDisplay ({videoCommentData}) {
   return (
-    <ul>
+    <>
+      <ul>
         {videoCommentData.map((commentData) => {
             return (
               <>
-              <hr />
-                <article className="comment-display">
+                <hr />
+                <article key={commentData.id} className="comment-display">
                     <div className="comment-display__image">
                       <img className="comment-display__image"/>
                     </div>
@@ -70,7 +70,9 @@ function CommentDisplay ({videoCommentData}) {
               </>
             )
         })}
-    </ul>
+      </ul>
+      <hr className="comment-display__div"/>
+    </>
   )
 }
 

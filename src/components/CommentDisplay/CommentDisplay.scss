@@ -48,5 +48,8 @@ hr{
     }
     @include desktop{
         padding: 1rem 7rem 0 7rem;
+        &__div{
+            border: 0px;
+        }
     }
 }

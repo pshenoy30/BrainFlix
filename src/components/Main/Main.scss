@@ -4,12 +4,14 @@
 @use "../../styles/partials/mixins" as *;
 
 .main{
-    display: flex;
-    padding: 0 7rem;
-    &__right{
-        width: 73%;
-    }
-    &__left{
-        border-left: 1px solid $BrainFlix-Mercury;
+    @include desktop{
+        display: flex;
+        padding: 0 7rem;
+        &__right{
+            width: 73%;
+        }
+        &__left{
+            border-left: 1px solid $BrainFlix-Mercury;
+        }
     }
 }

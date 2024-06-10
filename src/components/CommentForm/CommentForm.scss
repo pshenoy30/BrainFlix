@@ -10,6 +10,12 @@
     @include tablet{
         padding: 1.5rem 1rem 0 3rem;
     }
+
+    @include desktop{
+        padding: 1.5rem 1rem 0 7rem;
+    }
+    
+
     &__left{
         padding-top: 1.25rem;
 
@@ -44,6 +50,9 @@
                     left: 0.25rem;
                     top:  0.25rem;
                 }
+                &:focus{
+                    border: 2px solid $BrainFlix-Blue;
+                }
             }
             &__button{
                 background-color: $BrainFlix-Blue;
@@ -66,7 +75,7 @@
         }
         @include tablet{
             font-size: 0.875rem;
-            padding: 0rem 3rem 0 3rem;
+            padding: 0rem 3rem 0 0;
             &__header{
                 margin-bottom: 0.25rem;
             }
@@ -92,6 +101,8 @@
             }  
         }
         @include desktop {
+            padding: 0rem 3rem 0 0rem;
+
             &__input-button__button{
                 width: 13rem;
             }

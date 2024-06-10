@@ -8,7 +8,6 @@ function NextVideo ({id, videoData, onVideoClicked}) {
   function createNewVideoList(id){
     const newVideoData = videoData.filter((item) => item.id !== id);
     setNewVideoData(newVideoData);
-    console.log(newVideoData);
     newVideoData.map((videoElement) => {
         return(
             <aside>
@@ -29,11 +28,11 @@ function NextVideo ({id, videoData, onVideoClicked}) {
             }
             if(videoElement.id !== id){
                 return (
-                    <article class="next-video__list" key={videoElement.id} onClick={displaySelectedVideo}>
-                        <img class="next-video__list__image" src={videoElement.image} />
-                        <div class="next-video__list__details">
-                            <h2 class="next-video__list__details__text">{videoElement.title}</h2>
-                            <h2 class="next-video__list__details__text next-video__list__details__text--light">{videoElement.channel}</h2>
+                    <article className="next-video__list" key={videoElement.id} onClick={displaySelectedVideo}>
+                        <img className="next-video__list__image" src={videoElement.image} />
+                        <div className="next-video__list__details">
+                            <h2 className="next-video__list__details__text">{videoElement.title}</h2>
+                            <h2 className="next-video__list__details__text next-video__list__details__text--light">{videoElement.channel}</h2>
                         </div>
                     </article>
                 )

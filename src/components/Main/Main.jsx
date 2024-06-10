@@ -22,12 +22,12 @@ function Main(){
   return (
     <>
       <VideoPlayer videoData={videoSelected} />
-      <div class="main">
-        <div class="main__right">
+      <div className="main">
+        <div className="main__right">
           <Video videoData={videoSelected} />
           <Comment videoDataComment={videoSelected.comments} />
         </div>
-        <div class="main__left">
+        <div className="main__left">
           <NextVideo id={videoSelected.id} videoData={videoDetailsData} onVideoClicked={videoSelect}/>
         </div>
       </div>
