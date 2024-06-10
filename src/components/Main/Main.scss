@@ -1,0 +1,17 @@
+@use "../../styles/partials/global.scss";
+@use "../../styles/partials/typography";
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.main{
+    @include desktop{
+        display: flex;
+        padding: 0 7rem;
+        &__right{
+            width: 73%;
+        }
+        &__left{
+            border-left: 1px solid $BrainFlix-Mercury;
+        }
+    }
+}

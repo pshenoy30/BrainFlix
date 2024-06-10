@@ -1,0 +1,15 @@
+@use "../../styles/partials/global.scss";
+@use "../../styles/partials/typography";
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.video{
+    width: 100vw;
+
+}
+
+.video__player{
+    width: 100%;
+    background-color: $BrainFlix-Black;
+    object-fit: cover;
+}

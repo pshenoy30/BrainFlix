@@ -1,0 +1,31 @@
+@use "../../styles/partials/global.scss";
+@use "../../styles/partials/typography";
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+
+.video-data{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 0.5rem;
+    &__stats{
+        display: flex;
+        gap: 0.25em;
+        &__image{
+            font-size: 0.8rem;
+            line-height: 1.25rem;
+        }
+        &__text{
+            color: $BrainFlix-Silver;
+            font-size: 0.8rem;
+            line-height: 1.25rem;
+            font-weight: 400;
+        }
+    }
+    @include tablet{
+        flex-direction: row;
+        gap: 2rem;
+    }
+}
+    
