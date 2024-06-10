@@ -72,6 +72,40 @@
                 }
             }
         }
+        @include tablet{
+            padding-top: 0;
+            width: 100%;
+            gap: 2rem;
+            display: flex;
+            &__search{
+                width: 148%;
+                &::placeholder{
+                    font-size: 0.875rem;
+                }
+            }
+            &__button-container{
+                position: static;
+                &__button{
+                    margin-top: 0;
+                    font-size: 0.875rem;
+                }
+            }
+        }
     }
+
+    @include tablet{
+        display: flex;
+        gap: 12rem;
+        padding: 1rem 2rem;
+        font-size: 0.875rem;
+        height: 3rem;;
+    }
+
+    @include desktop{
+        padding: 1rem 9rem;
+        gap: 27rem;
+    }
+    
+
 
 }

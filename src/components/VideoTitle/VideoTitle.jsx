@@ -5,7 +5,7 @@ function VideoTitle({videoDataTitle}){
     return (
         <article>
             <h1 className="video-title">{videoDataTitle}</h1>
-            <hr></hr>
+            <hr className="video-title__divider"></hr>
         </article>
     )
   }

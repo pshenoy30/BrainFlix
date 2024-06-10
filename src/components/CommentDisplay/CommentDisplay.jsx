@@ -51,10 +51,10 @@ const dynamicTimeStamp = (timestamp) => {
 function CommentDisplay ({videoCommentData}) {
   return (
     <ul>
-        <hr />
         {videoCommentData.map((commentData) => {
             return (
               <>
+              <hr />
                 <article className="comment-display">
                     <div className="comment-display__image">
                       <img className="comment-display__image"/>
@@ -67,7 +67,6 @@ function CommentDisplay ({videoCommentData}) {
                       <p className="comment-display__details__name-time__text">{commentData.comment}</p> 
                     </div>
                 </article>
-                <hr />
               </>
             )
         })}

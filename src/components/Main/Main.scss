@@ -3,14 +3,13 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
-.video-info{
-    padding: 1rem;
+.main{
     display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-
-    @include tablet{
-        font-size: 0.875rem;
-        padding: 0 3rem 1.5rem 3rem;
+    padding: 0 7rem;
+    &__right{
+        width: 73%;
+    }
+    &__left{
+        border-left: 1px solid $BrainFlix-Mercury;
     }
 }

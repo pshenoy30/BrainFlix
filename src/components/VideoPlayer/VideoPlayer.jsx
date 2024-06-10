@@ -5,13 +5,12 @@ function VideoPlayer ({videoData}) {
   const {image, video} = videoData;
   
   return (
-    <>
-    <video className="video-player" controls poster={image} > 
+    <div class="video">
+      <video className="video__player" controls poster={image} > 
         <source src={video} />
         Your browser doesnot support video
-    </video>
-    </>
-    
+      </video>
+    </div>
   )
 }
 

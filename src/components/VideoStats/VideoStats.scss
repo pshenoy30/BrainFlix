@@ -19,5 +19,9 @@
             font-weight: 400;
         }
     }
+    @include tablet{
+        flex-direction: row;
+        gap: 2rem;
+    }
 }
     
