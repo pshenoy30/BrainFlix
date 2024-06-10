@@ -1,0 +1,9 @@
+@use "../../styles/partials/global.scss";
+@use "../../styles/partials/typography";
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.video-player{
+    width: 100vw;
+    background-color: $BrainFlix-Black;
+}
