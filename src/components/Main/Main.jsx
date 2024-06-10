@@ -3,7 +3,7 @@ import videoDetailsData from '../../data/video-details.json';
 import VideoPlayer from '../VideoPlayer/VideoPlayer.jsx';
 import VideoTitle from '../VideoTitle/VideoTitle.jsx';
 import VideoInfo from '../VideoInfo/VideoInfo.jsx';
-import VideoDescription from '../VideoDescription/videoDescription.jsx';
+import VideoDescription from '../VideoDescription/VideoDescription.jsx';
 import Comment from '../Comment/Comment.jsx';
 import NextVideo from '../NextVideo/NextVideo.jsx';
 

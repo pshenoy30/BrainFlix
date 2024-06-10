@@ -1,9 +1,11 @@
-function videoDescription ({videoDataDescription}) {
+import "./VideoDescription.scss"
+
+function VideoDescription ({videoDataDescription}) {
   return (
     <article>
-        <p>{videoDataDescription}</p>
+        <p class="video-description">{videoDataDescription}</p>
     </article>
   )
 }
 
-export default videoDescription;
+export default VideoDescription;
