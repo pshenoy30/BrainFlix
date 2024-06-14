@@ -1,7 +1,5 @@
-import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Header from "./components/Header/Header.jsx";
-import Main from "./components/Main/Main.jsx";
+import HomePage from './pages/HomePage/HomePage';
 
 function App() {
 
@@ -9,11 +7,9 @@ function App() {
     <>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<header />} />
+        <Route path="/" element={<HomePage />} />
       </Routes>
     </BrowserRouter>
-      <Header />
-      <Main />
     </>
   )
 }
