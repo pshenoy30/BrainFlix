@@ -3,8 +3,18 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
+.video{
+    width: 100vw;
 
-.video-title{
+}
+
+.video__player{
+    width: 100%;
+    background-color: $BrainFlix-Black;
+    object-fit: cover;
+}
+
+.video__title{
     padding: 1.5rem 1rem 1rem 1rem;
     font-size: 1.5rem;
     line-height: 2rem;
@@ -21,5 +31,4 @@
             margin: 0;
         }
     }
-    
 }
