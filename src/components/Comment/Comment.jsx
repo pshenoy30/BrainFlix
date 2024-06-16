@@ -4,7 +4,7 @@ import CommentDisplay from "../CommentDisplay/CommentDisplay.jsx";
 
 function Comment ({videoDataComment}){
 const commentLength =  videoDataComment.length;
-//   console.log(commentLength) 
+
   return (
     <section>
         <CommentNumber commentLength={commentLength} />

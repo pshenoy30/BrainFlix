@@ -1,4 +1,4 @@
-import dynamicTimeStamp from "../../utils/dynamicTimeStamp.jsx";
+import dynamicTimeStamp from "../../utils/dynamicTimeStamp.js";
 import likeIcon from "../../assets/Icons/likes.svg"
 import viewsIcon from "../../assets/Icons/views.svg"
 import "./VideoDetails.scss"
