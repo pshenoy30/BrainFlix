@@ -3,9 +3,9 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
+
 .video{
     width: 100vw;
-
 }
 
 .video__player{
@@ -14,21 +14,29 @@
     object-fit: cover;
 }
 
-.video__title{
-    padding: 1.5rem 1rem 1rem 1rem;
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-weight: 700;
-    color: $BrainFlix-Black;
-
+.video-section{
     @include tablet{
-        font-size: 2.063rem;
-        line-height: 2.75rem;
-        padding: 1.5rem 1rem 1rem 3rem;
-
-        &__divider{
-            border: 0px;
-            margin: 0;
+        margin: 0 2.5rem;
+    }
+    @include desktop{
+        margin: 0 9.5rem;
+    }
+    &__title{
+        padding: 1.5rem 1rem 1rem 1rem;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 700;
+        color: $BrainFlix-Black;
+    
+        @include tablet{
+            font-size: 2.063rem;
+            line-height: 2.75rem;
+            padding: 1.5rem 1rem 1rem 0;
+    
+            &__divider{
+                border: 0px;
+                margin: 0;
+            }
         }
     }
 }

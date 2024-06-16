@@ -1,7 +1,5 @@
 import "./VideoSection.scss";
 
-
-
 function VideoSection ({videoData}){
   
   const {image, video, title} = videoData;
@@ -14,10 +12,10 @@ function VideoSection ({videoData}){
                     Your browser doesnot support video
             </video>
         </div>
-        <section>
+        <section className="video-section">
             <article>
-                <h1 className="video__title">{title}</h1>
-                <hr />
+                <h1 className="video-section__title">{title}</h1>
+                <hr className="video-section__title__divider"/>
             </article>
         </section>
     </>
