@@ -1,13 +1,15 @@
-import Header from "./components/Header/Header.jsx";
-import Main from "./components/Main/Main.jsx";
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import HomePage from "./pages/HomePage/HomePage.jsx"
 
 function App() {
 
   return (
-    <>
-    <Header />
-    <Main />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/videos/:videoId" element={<HomePage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
