@@ -8,6 +8,9 @@
 
     &__logo{
         text-align: center;
+        @include desktop{
+            padding-top: 0.75rem;
+        }
     }
 
     &__form{
@@ -22,6 +25,9 @@
                 position: absolute;
                 bottom: 3.3rem;
                 left: 0.75rem;
+                @include tablet{
+                    bottom: 3rem;
+                }
             }
             &__input{
                 width: 100%;
@@ -37,6 +43,9 @@
                     position: absolute;
                     left: 2.25rem;
                     top:  0.5rem;
+                    @include tablet{
+                        top:  0.75rem;
+                    }
                 }
             }
         }
