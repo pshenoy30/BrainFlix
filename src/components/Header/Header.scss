@@ -29,6 +29,9 @@
                 background-color: $BrainFlix-Alabaster;
                 border: 1px solid $BrainFlix-Mercury;
                 border-radius: 4px;
+                @include tablet{
+                    height: 2.5rem;
+                }
                 &::placeholder{
                     color: $BrainFlix-Black;
                     position: absolute;

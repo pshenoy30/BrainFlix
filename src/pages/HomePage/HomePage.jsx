@@ -1,5 +1,6 @@
 import Header from "../../components/Header/Header.jsx";
 import Main from "../../components/Main/Main.jsx";
+import uploadIcon from "../../assets/Icons/upload.svg";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { BRAINFLIX_API_KEY, BRAINFLIX_API_URL } from "../../utils/api.js"
@@ -32,7 +33,7 @@ function HomePage () {
 
     return (
       <>
-          <Header />
+          <Header buttonIcon={uploadIcon} buttonName="UPLOAD" buttonContainerClass="button-container__upload" buttonClass="button-container__upload__button" buttonIconClass="button-container__upload__button__image" />
           <Main videoToDisplayID={videoToDisplay} videoListData = {videoList}/>
       </>
     )

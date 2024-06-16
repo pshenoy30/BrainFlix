@@ -1,5 +1,6 @@
 import avatarImage from "../../assets/Images/Mohan-muruge.jpg";
-import commentImage from "../../assets/Icons/add_comment.svg"
+import commentIcon from "../../assets/Icons/add_comment.svg";
+import Button from "../Button/Button.jsx";
 import "./CommentForm.scss";
 
 function CommentForm (){
@@ -12,10 +13,7 @@ function CommentForm (){
             <h3 className="comment-form__right__header">Join the converstation</h3>
             <div className="comment-form__right__input-button">
               <input placeholder="Add a new comment" className="comment-form__right__input-button__input" />
-              <button type="submit" className="comment-form__right__input-button__button">
-                <img className="comment-form__right__input-button__button__image" src={commentImage} />
-                Comment
-              </button>
+              <Button imageSrc={commentIcon} name="COMMENT" buttonContainerClassName="comment-form__right__input-button__button-container" buttonClassName="comment-form__right__input-button__button-container__button" buttonIconClassName="comment-form__right__input-button__button-container__button__image" />
             </div>
         </div>
     </form>

@@ -54,24 +54,6 @@
                     border: 2px solid $BrainFlix-Blue;
                 }
             }
-            &__button{
-                background-color: $BrainFlix-Blue;
-                border: none;
-                color: $BrainFlix-White;
-                margin-bottom: 1rem;
-                margin-top: 0.5rem;
-                border-radius: 4px;
-                width: 100%;
-                height: 2rem;
-                position: relative;
-                text-align: center;
-                &__image{
-                    position: absolute;
-                    left: 6px;
-                    top: 50%;
-                    transform: translateY(-50%);
-                }
-            }
         }
         @include tablet{
             font-size: 0.875rem;

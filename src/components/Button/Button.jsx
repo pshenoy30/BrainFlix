@@ -1,10 +1,10 @@
 import "./Button.scss"
 
-function Button ({imageSrc, name}) {
+function Button ({imageSrc, name, buttonContainerClassName, buttonClassName, buttonIconClassName}) {
   return (
-    <div className="button-container">
-            <button className="button-container__button" type="button">
-              <img className="button-container__button__image" src={imageSrc} alt="Upload Icon"/>
+    <div className={buttonContainerClassName}>
+            <button className={buttonClassName} type="button">
+              <img className={buttonIconClassName} src={imageSrc} alt=""/>
               {name}
             </button>
     </div>
