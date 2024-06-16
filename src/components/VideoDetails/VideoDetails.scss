@@ -3,6 +3,16 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
+.video-details{
+    @include tablet{
+        margin: 0 2.5rem;
+    }
+    
+    @include desktop{
+        margin: 0;
+    }
+}
+
 .video-info{
     padding: 1rem;
     display: flex;
@@ -11,6 +21,9 @@
 
     @include tablet{
         font-size: 0.875rem;
+        padding: 0 0 1rem 0;
+    }
+    @include desktop{
         padding: 0 3rem 1.5rem 3rem;
     }
 }
@@ -58,7 +71,11 @@
     
     @include tablet{
         font-size: 0.875rem;
-        padding: 1.5rem 3rem 0 3rem;
+        padding: 1.5rem 0 ;
+    }
+
+    @include desktop {
+        padding: 1.5rem 0.75rem 1.5rem 2.5rem
     }
 
 }

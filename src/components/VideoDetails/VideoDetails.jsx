@@ -8,7 +8,7 @@ function Video ({videoData}){
   const {channel,timestamp, likes, views,description} = videoData;
 
   return (
-    <section>
+    <section className="video-details">
         <article className="video-info">
                 <div className="video-data">
                     <h2 className="video-data__text">By {channel}</h2>
