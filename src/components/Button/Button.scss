@@ -1,0 +1,41 @@
+@use "../../styles/partials/global.scss";
+@use "../../styles/partials/typography";
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.button-container{
+    position: absolute;
+    width: 90%;
+    top: 5.75rem;
+    @include tablet{
+        position: static;
+        margin: 0;
+    }
+
+    &__button{
+        background-color: $BrainFlix-Blue;
+        border: none;
+        color: $BrainFlix-White;
+        margin-bottom: 1rem;
+        margin-top: 0.5rem;
+        border-radius: 4px;
+        width: 100%;
+        height: 2rem;
+        position: relative;
+        text-align: center;
+        &__image{
+            position: absolute;
+            left: 6px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &:hover{
+            background-color: $BrainFlix-DarkBlue;
+        }
+        @include tablet {
+            margin: 0;
+            font-size: 0.875rem;
+    }
+    }
+    
+}
