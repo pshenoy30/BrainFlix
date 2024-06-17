@@ -8,6 +8,9 @@ ul{
     @include tablet{
         padding: 0 2.5rem;
     }
+    @include desktop{
+        padding: 0 0 0 2rem;
+    }
 }
 
 .comment-display{
@@ -43,7 +46,7 @@ ul{
         }
     }
     @include desktop{
-        padding: 1rem 7rem 0 7rem;
+        padding: 1rem 0.75rem 0 0;
         &__div{
             border: 0px;
         }
