@@ -5,10 +5,14 @@ import "./VideoDetails.scss"
 
 function Video ({videoData}){
 
-  const {channel,timestamp, likes, views,description} = videoData;
+  const {channel,timestamp, likes, views,description, title} = videoData;
 
   return (
     <section className="video-details">
+        <article>
+            <h1 className="video-details__title">{title}</h1>
+            <hr className="video-details__title__divider"/>
+        </article>
         <article className="video-info">
                 <div className="video-data">
                     <h2 className="video-data__text">By {channel}</h2>
@@ -24,11 +28,11 @@ function Video ({videoData}){
                         <h2 className="video-data__stats__text">{likes}</h2>
                     </div>
                  </div>
-            </article>
-            <hr />
-            <article>
-               <p className="video-description">{description}</p>
-            </article>
+        </article>
+        <hr className="video-data__div"/>
+        <article>
+          <p className="video-description">{description}</p>
+        </article>
     </section>
   )
 }
