@@ -9,6 +9,7 @@
 }
 
 hr{
+    border: 1px solid $BrainFlix-Mercury;
     margin: 0 1rem;
     
     @include tablet{
