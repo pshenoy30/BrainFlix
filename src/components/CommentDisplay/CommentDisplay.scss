@@ -38,7 +38,9 @@ ul{
     }
     @include tablet{
         font-size: 0.875rem;
-        //padding: 1rem 3rem 0 3rem;
+        &__div{
+            margin: 0 2.5rem;
+        }
     }
     @include desktop{
         padding: 1rem 7rem 0 7rem;
