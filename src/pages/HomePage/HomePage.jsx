@@ -18,8 +18,7 @@ function HomePage () {
       setVideoList(response.data);
       setLoaded(false)
       return loaded;
-    }catch (error){
-      console.log("Couldn't fetch the data", err);
+    }catch (err){
       setError(true)
     }
   }
@@ -28,7 +27,13 @@ function HomePage () {
     getVideos();
   },[]);
 
-  if(!loaded){
+  if(error) {
+    return (
+      <h1>Unfortunately, we were unable to load the data</h1>
+    )
+  }
+
+  if(!loaded) {
     const videoToDisplay = videoId || videoList[0]?.id;
 
     return (
@@ -36,6 +41,10 @@ function HomePage () {
           <Header buttonIcon={uploadIcon} buttonName="UPLOAD" buttonContainerClass="button-container__upload" buttonClass="button-container__upload__button" buttonIconClass="button-container__upload__button__image" />
           <Main videoToDisplayID={videoToDisplay} videoListData = {videoList}/>
       </>
+    )
+  } else {
+    return(
+      <h1>Loading data</h1>
     )
   }
 }
