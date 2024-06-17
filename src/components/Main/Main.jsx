@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { BRAINFLIX_API_KEY, BRAINFLIX_API_URL } from "../../utils/api.js"
-import videoDetailsData from '../../data/video-details.json';
 import VideoSection from "../VideoSection/VideoSection.jsx"
 import VideoDetails from '../VideoDetails/VideoDetails.jsx';
 import Comment from '../Comment/Comment.jsx';
@@ -13,7 +12,6 @@ function Main({videoToDisplayID, videoListData}){
   const [video, setVideo] = useState (null);
   const [error, setError] = useState (false);
   const [loaded, setLoaded] = useState(true);
-  const { videoId } = useParams();
   
   const getVideoDataById = async (videoId) => {
     try {
@@ -36,8 +34,13 @@ function Main({videoToDisplayID, videoListData}){
     getVideoDataById(videoToDisplayID);
   },[videoToDisplayID]);
 
-  if(!loaded){
+  if(error) {
+    return (
+      <h1>Unfortunately, we couldn't fetch the data</h1>
+    )
+  }
 
+  if(!loaded) {
     return (
       <>
         <VideoSection videoData={video} />
@@ -51,6 +54,10 @@ function Main({videoToDisplayID, videoListData}){
           </div>
         </div>
       </>
+    )
+  }else {
+    return (
+      <h1>Loading data</h1>
     )
   }
   
