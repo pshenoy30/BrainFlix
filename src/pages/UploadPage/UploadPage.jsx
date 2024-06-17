@@ -3,6 +3,7 @@ import ThumbnailImage from "../../assets/Images/Upload-video-preview.jpg"
 import UploadIcon from "../../assets/Icons/upload.svg"
 import PublishIcon from "../../assets/Icons/publish.svg"
 import Button from "../../components/Button/Button.jsx"
+import { Link } from "react-router-dom"
 import "./UploadPage.scss"
 
 function UploadPage (props) {
@@ -29,7 +30,9 @@ function UploadPage (props) {
             </div>
             <hr className="upload__form__hr"/>
             <div className="upload__button-container" >
-                <Button  imageSrc={PublishIcon} name="PUBLISH" buttonContainerClassName="upload__form__button-container" buttonClassName="upload__form__button-container__button" buttonIconClassName="upload__form__button-container__button__image" />
+                <Link to="/confirmation">
+                    <Button  imageSrc={PublishIcon} name="PUBLISH" buttonContainerClassName="upload__form__button-container" buttonClassName="upload__form__button-container__button" buttonIconClassName="upload__form__button-container__button__image" />
+                </Link>
                 <Button imageSrc="" name="CANCEL" buttonContainerClassName="upload__form__button-container" buttonClassName="upload__form__button-container__button upload__form__button-container__button--cancel" />
             </div>
         </main>
