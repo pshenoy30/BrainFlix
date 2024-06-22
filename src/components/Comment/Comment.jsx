@@ -6,7 +6,6 @@ const commentLength =  videoDataComment.length;
 
   return (
     <section>
-        <CommentNumber commentLength={commentLength} />
         <CommentForm videoToDisplay={videoId} videoComments={videoDataComment}/>
     </section>
   )
