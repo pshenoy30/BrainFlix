@@ -3,8 +3,9 @@ import Main from "../../components/Main/Main.jsx";
 import uploadIcon from "../../assets/Icons/upload.svg";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { BRAINFLIX_API_KEY, BRAINFLIX_API_URL } from "../../utils/api.js"
 import axios from "axios";
+
+const BRAINFLIX_API_URL = "http://localhost:8080/";
 
 function HomePage () {
   const [loaded, setLoaded] = useState(true);
@@ -14,7 +15,7 @@ function HomePage () {
 
   async function getVideos () {
     try{
-      const response = await axios.get(BRAINFLIX_API_URL+"videos"+BRAINFLIX_API_KEY);
+      const response = await axios.get(BRAINFLIX_API_URL);
       setVideoList(response.data);
       setLoaded(false)
       return loaded;

@@ -7,9 +7,9 @@ function CommentDisplay ({videoCommentData}) {
       <ul>
         {videoCommentData.map((commentData) => {
             return (
-              <>
+              <section key={commentData.id}>
                 <hr />
-                <article key={commentData.id} className="comment-display">
+                <article className="comment-display">
                     <div className="comment-display__image">
                       <img className="comment-display__image"/>
                     </div>
@@ -21,7 +21,7 @@ function CommentDisplay ({videoCommentData}) {
                       <p className="comment-display__details__name-time__text">{commentData.comment}</p> 
                     </div>
                 </article>
-              </>
+              </section>
             )
         })}
       </ul>

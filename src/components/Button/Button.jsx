@@ -1,9 +1,9 @@
 import "./Button.scss"
 
-function Button ({imageSrc, name, buttonContainerClassName, buttonClassName, buttonIconClassName}) {
+function Button ({imageSrc, name, buttonContainerClassName, buttonClassName, buttonIconClassName, buttonFunction, formId }) {
   return (
     <div className={buttonContainerClassName}>
-            <button className={buttonClassName} type="button">
+            <button form={formId} onClick={buttonFunction} className={buttonClassName} type="button">
               <img className={buttonIconClassName} src={imageSrc} alt=""/>
               {name}
             </button>

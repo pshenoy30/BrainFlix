@@ -1,12 +1,15 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import { BRAINFLIX_API_KEY, BRAINFLIX_API_URL } from "../../utils/api.js"
+//import { BRAINFLIX_API_URL } from "../../utils/api.js"
 import VideoSection from "../VideoSection/VideoSection.jsx"
 import VideoDetails from '../VideoDetails/VideoDetails.jsx';
 import Comment from '../Comment/Comment.jsx';
 import NextVideo from '../NextVideo/NextVideo.jsx';
 import "./Main.scss";
+const BRAINFLIX_API_URL = "http://localhost:8080/"
+
+console.log(BRAINFLIX_API_URL);
 
 function Main({videoToDisplayID, videoListData}){
   const [video, setVideo] = useState (null);
@@ -15,7 +18,7 @@ function Main({videoToDisplayID, videoListData}){
   
   const getVideoDataById = async (videoId) => {
     try {
-      const response = await axios.get(BRAINFLIX_API_URL+"videos/"+videoId+BRAINFLIX_API_KEY);
+      const response = await axios.get(BRAINFLIX_API_URL+"videos/"+videoId);
       setVideo(response.data);
       setLoaded(false);
     } catch (error) {

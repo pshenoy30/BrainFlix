@@ -20,7 +20,9 @@ function Header({buttonIcon, buttonName, buttonContainerClass, buttonClass, butt
             <img className="header-section__form__search__image" src={searchIcon} alt="search icon" />
             <input id="search" className="header-section__form__search__input" placeholder="Search"></input>
           </div>
-          <Button imageSrc={buttonIcon} name={buttonName} buttonContainerClassName={buttonContainerClass} buttonClassName={buttonClass} buttonIconClassName={buttonIconClass} />
+          <Link to="/upload">
+            <Button imageSrc={buttonIcon} name={buttonName} buttonContainerClassName={buttonContainerClass} buttonClassName={buttonClass} buttonIconClassName={buttonIconClass} />
+          </Link>
           <div className="header-section__form__avatar">
             <img className="header-section__form__avatar__image" src={avatarImage} alt="Profile picture"/>
           </div>
