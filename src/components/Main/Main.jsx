@@ -9,7 +9,6 @@ import NextVideo from '../NextVideo/NextVideo.jsx';
 import "./Main.scss";
 const BRAINFLIX_API_URL = "http://localhost:8080/"
 
-console.log(BRAINFLIX_API_URL);
 
 function Main({videoToDisplayID, videoListData}){
   const [video, setVideo] = useState (null);
@@ -50,7 +49,7 @@ function Main({videoToDisplayID, videoListData}){
         <div className="main">
           <div className="main__right">
             <VideoDetails videoData={video} />
-            <Comment videoDataComment={video.comments} />
+            <Comment videoDataComment={video.comments} videoId={videoToDisplayID}/>
           </div>
           <div className="main__left">
             <NextVideo videoData={filterVideos(videoToDisplayID)}/>

@@ -26,7 +26,6 @@ ul{
     }
     &__details__name-time{
         display: flex;
-        justify-content: space-between;
         align-items: center;
         &__text{
             font-size: 0.8rem;
@@ -35,8 +34,9 @@ ul{
                 color: $BrainFlix-Mercury;
             }
             &--right{
-                align-self: end;
-            }
+                position: absolute;
+                right: 1rem;
+            }    
         }
     }
     @include tablet{
