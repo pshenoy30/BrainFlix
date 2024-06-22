@@ -1,4 +1,5 @@
 import "./VideoSection.scss";
+import ReactPlayer from "react-player";
 
 function VideoSection ({videoData}){
   
@@ -9,10 +10,12 @@ function VideoSection ({videoData}){
   return (
     <>
         <div className="video">
-            <video className="video__player" controls poster={BRAINFLIX_API_URL+image} > 
+            {/* <video className="video__player" controls poster={BRAINFLIX_API_URL+image} > 
                 <source src={video} />
                     Your browser doesnot support video
-            </video>
+            </video> */}
+            <ReactPlayer className="video__player" url="../../assets/Video/BrainStation Sample Video.mp4" playing={true} muted={true} />
+            {/* <Control /> */}
         </div>
     </>
   )
