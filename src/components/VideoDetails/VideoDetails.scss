@@ -3,16 +3,6 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
-.video-details{
-    @include tablet{
-        margin: 0 2.5rem;
-    }
-    
-    @include desktop{
-        margin: 0;
-    }
-}
-
 .video-info{
     padding: 1rem;
     display: flex;
@@ -21,10 +11,11 @@
 
     @include tablet{
         font-size: 0.875rem;
-        padding: 0 0 1rem 0;
+        line-height: 1.25rem ;
+        padding: 0 0 0.5rem 0;
     }
     @include desktop{
-        padding: 0 3rem 1.5rem 3rem;
+        padding: 0 1rem 0.25rem 0;
     }
 }
 
@@ -32,13 +23,13 @@
     padding: 1.5rem 1rem 1rem 1rem;
     font-size: 1.5rem;
     line-height: 2rem;
-    font-weight: 700;
+    font-weight: 900;
     color: $BrainFlix-Black;
 
     @include tablet{
         font-size: 2.063rem;
         line-height: 2.75rem;
-        padding: 1.5rem 1rem 1rem 0;
+        padding: 0 0 0.5rem 0;
         width: 36.5rem;
 
         &__divider{
@@ -47,7 +38,8 @@
         }
     }
     @include desktop{
-        padding: 1.5rem 1rem 1rem 2.5rem;
+        font-size: 1.95rem;
+        padding: 1.5rem 0rem 0.25rem 0;
     }
 }
 
@@ -64,6 +56,9 @@
         &--silver{
             color: $BrainFlix-Silver;
             font-weight: 400;
+        }
+        &--bold{
+            font-weight: 900;
         }
     }
     &__stats{
@@ -84,11 +79,6 @@
         flex-direction: row;
         gap: 2rem;
     }
-    @include desktop{
-        &__div{
-            margin: 0 0 0 2.5rem;
-        }
-    }
 }
 
 .video-description{
@@ -100,11 +90,12 @@
     
     @include tablet{
         font-size: 0.875rem;
-        padding: 1.5rem 0 ;
+        padding: 1.5rem 1.5rem 1.5rem 0
     }
 
     @include desktop {
-        padding: 1.5rem 0.75rem 1.5rem 2.5rem
+        font-size: 0.84rem;
+        padding: 1.5rem 1.8rem 1.5rem 0;
     }
 
 }

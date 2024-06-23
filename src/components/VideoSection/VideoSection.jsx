@@ -7,14 +7,12 @@ function VideoSection ({videoData}){
   
 
   return (
-    <>
-        <div className="video">
-            <video className="video__player" controls poster={BRAINFLIX_API_URL+image} > 
-                <source src={video} />
-                    Your browser doesnot support video
-            </video>
-        </div>
-    </>
+      <section className="video">
+          <video className="video__player" controls poster={BRAINFLIX_API_URL+image} > 
+              <source src={video} />
+                  Your browser doesnot support video
+          </video>
+      </section>
   )
 }
 

@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
 import axios from 'axios';
-//import { BRAINFLIX_API_URL } from "../../utils/api.js"
 import VideoSection from "../VideoSection/VideoSection.jsx"
 import VideoDetails from '../VideoDetails/VideoDetails.jsx';
 import Comment from '../Comment/Comment.jsx';
@@ -46,15 +44,15 @@ function Main({videoToDisplayID, videoListData}){
     return (
       <>
         <VideoSection videoData={video} />
-        <div className="main">
-          <div className="main__right">
+        <main className="main"> 
+          <section className="main__right">
             <VideoDetails videoData={video} />
-            <Comment videoDataComment={video.comments} videoId={videoToDisplayID}/>
-          </div>
-          <div className="main__left">
+            <Comment videoComments={video.comments} videoToDisplay={videoToDisplayID}/>
+          </section>
+          <section className="main__left">
             <NextVideo videoData={filterVideos(videoToDisplayID)}/>
-          </div>
-        </div>
+          </section>
+        </main>
       </>
     )
   }else {

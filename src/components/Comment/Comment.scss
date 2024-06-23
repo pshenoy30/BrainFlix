@@ -8,13 +8,8 @@
     display: flex;
     gap: 1rem;
     @include tablet{
-        padding: 1.5rem 1.5rem 0 3.5rem;
+        padding: 1.5rem 0 0.5rem 0;
     }
-
-    @include desktop{
-        padding: 1.5rem 0 0 2rem;
-    }
-    
 
     &__left{
         padding-top: 1.25rem;
@@ -57,7 +52,7 @@
         }
         @include tablet{
             font-size: 0.875rem;
-            padding: 0rem 1rem 0 0;
+            padding: 0 0 0 0;
             margin-bottom: 1rem;
             &__header{
                 margin-bottom: 0.25rem;
@@ -86,8 +81,9 @@
         @include desktop {
             padding: 0rem 0.75rem 0 0;
 
-            &__input-button__button{
-                width: 13rem;
+            &__input-button__button-container__button{
+                width: 9rem;
+                font-size: 0.72rem;
             }
         }
     }
@@ -101,7 +97,9 @@ ul{
         padding: 0 0 0 2rem;
     }
 }
-
+.comment{
+    padding-bottom: 1rem;
+}
 .comment-display{
     display: flex;
     padding: 1.5rem 1rem 0 1rem;
@@ -126,19 +124,33 @@ ul{
                 &--right{
                     position: absolute;
                     right: 1rem;
+                    
+                    @include tablet{
+                        right: 3rem;
+                    }
+
+                    @include desktop{
+                        right: 33.5rem;
+                    }
                 }    
             }
         }
         &__button-container{
             margin: 0 1rem;
+            text-align: right;
+            @include tablet{
+                margin: 0 0;
+            }
+            @include desktop{
+                padding-right: 0.7rem;
+            }
         }
     }
         
     @include tablet{
         font-size: 0.875rem;
-        &__div{
-            margin: 0 2.5rem;
-        }
+        padding: 1.5rem 0 1rem 0;
+        margin-bottom: 0;
     }
     @include desktop{
         padding: 1rem 0.75rem 0 0;
@@ -154,6 +166,6 @@ ul{
     line-height: 1.25rem;
     @include tablet{
         font-size: 0.875rem;
-        padding: 0 3rem 0 2.5rem;
+        padding: 0 3rem 0 0;
     }      
 }

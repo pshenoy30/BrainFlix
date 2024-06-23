@@ -4,7 +4,7 @@ function Button ({imageSrc, name, buttonContainerClassName, buttonClassName, but
   return (
     <div className={buttonContainerClassName}>
             <button onClick={buttonFunction} className={buttonClassName} type="button" id={dataKey}>
-              <img className={buttonIconClassName} src={imageSrc} alt=""/>
+              <img className={buttonIconClassName} src={imageSrc} />
               {name}
             </button>
     </div>

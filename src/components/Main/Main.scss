@@ -6,12 +6,20 @@
 .main{
     @include desktop{
         display: flex;
-        padding: 0 7rem;
+        padding: 0 6rem;
         &__right{
             width: 73%;
         }
         &__left{
             border-left: 1px solid $BrainFlix-Mercury;
+        }
+    }
+    &__right{
+        @include tablet{
+            padding: 1.5rem 3rem 0 3rem;
+        }
+        @include desktop{
+            padding: 0;
         }
     }
 }

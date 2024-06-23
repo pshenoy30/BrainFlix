@@ -13,7 +13,7 @@ function NextVideo ({videoData}) {
                 return (
                         <article className="next-video__list" key={videoElement.id} >
                             <Link to={paramLink} >
-                                <img className="next-video__list__image" src={BRAINFLIX_API_URL + videoElement.image} />
+                                <img className="next-video__list__image" src={BRAINFLIX_API_URL + videoElement.image} alt={videoElement.title}/>
                             </Link>
                             <div className="next-video__list__details">
                                 <h2 className="next-video__list__details__text">{videoElement.title}</h2>
