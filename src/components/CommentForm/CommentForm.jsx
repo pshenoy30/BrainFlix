@@ -46,9 +46,7 @@ function CommentForm ({videoToDisplay,videoComments}){
     })
 
     let video = await getVideoDataByIdReturnFunction(videoToDisplay);
-    console.log(video);
     const displayComments = video.comments;
-    console.log(displayComments);
     setDisplayedVideoComments(displayComments);
     setCommentDescription("");
     setCommentLength(displayComments.length)
@@ -61,13 +59,10 @@ function CommentForm ({videoToDisplay,videoComments}){
   await axios.delete(BRAINFLIX_API_URL+"videos/"+videoToDisplay+"/comments/"+commentId)
 
   let video = await getVideoDataByIdReturnFunction(videoToDisplay);
-  console.log(video);
   const displayComments = video.comments;
   setDisplayedVideoComments(displayComments);
   setCommentLength(displayComments.length)
 }
-
-
 
   return (
     <>
@@ -84,9 +79,7 @@ function CommentForm ({videoToDisplay,videoComments}){
               </div>
           </div>
       </form>
-    {/* <CommentDisplay videoId={videoToDisplay} videoCommentData={videoComments}/> */}
     {displayedVideoComments.map((commentData) => {
-          console.log(commentData.id)
             return (
               <section key={commentData.id}>
                 <hr />

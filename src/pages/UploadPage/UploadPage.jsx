@@ -13,18 +13,17 @@ const BRAINFLIX_API_URL = "http://localhost:8080";
 function UploadPage () {
  const [title,setTitle] = useState("");
  const [description,setDescription] = useState(""); 
- const [videoList, setVideoList] = useState(null);
+
  const [error, setError] = useState (false); 
  const navigate = useNavigate();
+ const [selectedImage, setSelectedImage] = useState(null);
 
- async function getVideos () {
+ const getVideos = async () => {
     try{
       const response = await axios.get(BRAINFLIX_API_URL);
-      setVideoList(response.data);
-      setLoaded(false)
-      return loaded;
+      return response.data;
     }catch (err){
-      setError(true)
+      console.log("Error in fetching you data", err)
     }
 }
 
@@ -32,15 +31,22 @@ function UploadPage () {
     event.preventDefault();
 
     await axios.post(BRAINFLIX_API_URL+ "/videos/", {
+        image:`/images/${selectedImage}`,
         title: title,
         description: description
     })
 
-    await getVideos()
+    const htmlElement = event.target
+    const formData = new FormData(htmlElement);
+
+    async function image_processor () {
+        await axios.post(BRAINFLIX_API_URL+"/videos/upload", formData, {
+            file: formData
+        })
+    }
+    const videoList = await getVideos();
     const videoListLastItem = videoList.length - 1;
     const videoListLastItemId = videoList[videoListLastItem].id;
-    console.log(videoListLastItemId);
-    console.log("video uploaded");
     setTitle("");
     setDescription("");
     navigate(`/videos/${videoListLastItemId}`);
@@ -56,7 +62,13 @@ function UploadPage () {
             <div className="upload__container">
                 <div className="upload__container__right">
                     <h2 className="upload__subtitle">VIDEO THUMBNAIL</h2>
-                    <img src={ThumbnailImage} alt="uploaded video thumbnail" className="upload__image" />
+                    <form action="https://localhost:8080/vidoes/upload" method="post" encType="multipart/form-data">
+                        <img src={ThumbnailImage} alt="video thumbnail" className="upload__image" />
+                        <input type="file" name="imageFile" onChange={(event) => {
+                            console.log(event.target.files[0]);
+                            setSelectedImage(event.target.files[0]);
+                        }} />
+                    </form>
                 </div>
                 <div className="upload__container__left">
                     <form id="form__id"className="upload__form" >
